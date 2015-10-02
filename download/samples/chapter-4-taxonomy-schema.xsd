@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by Charles Hoffman, CPA, UBmatrix: 2013-05-15 -->
+<!-- The originals are found at http://www.xbrlsite.com/DigitalFinancialReporting/Metapatterns/2013-05-15 -->
+<!-- Edited by Ghislain Fourny for pedagogical purposes -->
+<!-- The XBRL book, Chapter 3: Concepts -->
+<!-- A complete taxonomy schema, but with no linkbase import machinery nor ids -->
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="ttp://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric"
+    xmlns:pattern="http://www.xbrlsite.com/DigitalFinancialReporting/Metapattern/MadeUp"
+    targetNamespace="http://www.xbrlsite.com/DigitalFinancialReporting/Metapattern/MadeUp"
+    xsi:schemaLocation="
+      http://www.xbrl.org/2003/instance
+      http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+      http://www.w3.org/2001/XMLSchema
+      https://www.w3.org/2001/XMLSchema.xsd"
+    elementFormDefault="qualified">
+    <xs:import
+        namespace="http://www.xbrl.org/2003/instance"
+        schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+    <xs:import
+        namespace="http://www.xbrl.org/dtr/type/non-numeric"
+        schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+    <xs:element
+        name="BankBorrowingsPolicy"
+        type="xbrli:stringItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+    <xs:element
+        name="BasisOfPresentation"
+        type="nonnum:textBlockItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+    <xs:element
+        name="DescriptionOfInventoryComponents"
+        type="xbrli:stringItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+    <xs:element
+        name="InventoryCostMethod"
+        type="xbrli:stringItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+    <xs:element
+        name="InventoryValuationMethod"
+        type="xbrli:stringItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+    <xs:element
+        name="InvestmentsInSecuritiesPolicy"
+        type="xbrli:stringItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+    <xs:element
+        name="ProvisionsPolicy"
+        type="nonnum:textBlockItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+    <xs:element
+        name="TradeReceivablesPolicy"
+        type="nonnum:textBlockItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+    <xs:element
+        name="BuildingsNet"
+        type="xbrli:monetaryItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="instant"
+        xbrli:balance="debit"
+        nillable="true" />
+    <xs:element
+        name="ComputerEquipmentNet"
+        type="xbrli:monetaryItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="instant"
+        xbrli:balance="debit"
+        nillable="true" />
+    <xs:element
+        name="FurnitureAndFixturesNet"
+        type="xbrli:monetaryItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="instant"
+        xbrli:balance="debit"
+        nillable="true" />
+    <xs:element
+        name="Land"
+        type="xbrli:monetaryItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="instant"
+        xbrli:balance="debit"
+        nillable="true" />
+    <xs:element
+        name="OtherPropertyPlantAndEquipmentNet"
+        type="xbrli:monetaryItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="instant"
+        xbrli:balance="debit"
+        nillable="true" />
+    <xs:element
+        name="PropertyPlantAndEquipmentNet"
+        type="xbrli:monetaryItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="instant"
+        xbrli:balance="debit"
+        nillable="true" />
+</xs:schema>

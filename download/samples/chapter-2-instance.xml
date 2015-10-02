@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by Charles Hoffman, CPA, UBmatrix: 2013-05-15 -->
+<!-- The originals are found at http://www.xbrlsite.com/DigitalFinancialReporting/Metapatterns/2013-05-15 -->
+<!-- Edited by Ghislain Fourny for pedagogical purposes -->
+<!-- The XBRL book, Chapter 2: Facts -->
+<!-- A complete instance, but with no taxonomy import machinery -->
+<xbrli:xbrl
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:pattern="http://www.xbrlsite.com/DigitalFinancialReporting/Metapattern/MadeUp"
+    xmlns:iso4217="http://www.xbrl.org/2003/iso4217">
+    
+    <!-- The contexts -->
+    
+    <xbrli:context id="D-2010">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.SampleCompany.com">SAMP</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:startDate>2010-01-01</xbrli:startDate>
+            <xbrli:endDate>2010-12-31</xbrli:endDate>
+        </xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="I-2010">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.SampleCompany.com">SAMP</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2010-12-31</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="I-2009">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.SampleCompany.com">SAMP</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2009-12-31</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+
+    <!-- The units -->
+    
+    <xbrli:unit id="U-Monetary">
+        <xbrli:measure>iso4217:USD</xbrli:measure>
+    </xbrli:unit>
+
+    <!-- The facts -->
+    
+    <pattern:BasisOfPresentation contextRef="D-2010">Praesent fringilla feugiat magna. Suspendisse et lorem eu risus convallis placerat. Suspendisse potenti. Donec malesuada lorem id mi. Nunc ut purus ac nisl tempus accumsan.</pattern:BasisOfPresentation>
+    
+    <pattern:InventoryValuationMethod contextRef="D-2010">Cost</pattern:InventoryValuationMethod>
+    <pattern:DescriptionOfInventoryComponents contextRef="D-2010">Proin elit sem, ornare non, ullamcorper vel, sollicitudin a, lacus. Mauris tincidunt cursus est. Nulla sit amet nibh. Sed elementum feugiat augue. Nam non tortor non leo porta bibendum. Morbi eu pede.</pattern:DescriptionOfInventoryComponents>
+    <pattern:InventoryCostMethod contextRef="D-2010">FIFO</pattern:InventoryCostMethod>
+    
+    <pattern:TradeReceivablesPolicy contextRef="D-2010">Sed magna felis, accumsan a, fermentum quis, varius sed, ipsum. Nullam leo. Donec eros.</pattern:TradeReceivablesPolicy>
+    <pattern:InvestmentsInSecuritiesPolicy contextRef="D-2010">Etiam ipsum orci, gravida nec, feugiat ut, malesuada quis, mauris. Etiam porttitor. Ut venenatis, velit a accumsan interdum, odio metus mollis mauris, non pharetra augue arcu eu felis.</pattern:InvestmentsInSecuritiesPolicy>
+    <pattern:BankBorrowingsPolicy contextRef="D-2010">Ut ut risus nec nibh dictum posuere. Phasellus eleifend, diam vitae dapibus pulvinar, erat ligula auctor dui, eget congue justo lorem hendrerit tellus.</pattern:BankBorrowingsPolicy>
+    
+    <pattern:ProvisionsPolicy contextRef="D-2010">Suspendisse vestibulum augue eu justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</pattern:ProvisionsPolicy>
+    
+    <pattern:Land contextRef="I-2010" unitRef="U-Monetary" decimals="INF">5347000</pattern:Land>
+    <pattern:Land contextRef="I-2009" unitRef="U-Monetary" decimals="INF">1147000</pattern:Land>
+    
+    <pattern:BuildingsNet contextRef="I-2010" unitRef="U-Monetary" decimals="INF">244508000</pattern:BuildingsNet>
+    <pattern:BuildingsNet contextRef="I-2009" unitRef="U-Monetary" decimals="INF">366375000</pattern:BuildingsNet>
+    
+    <pattern:FurnitureAndFixturesNet contextRef="I-2010" unitRef="U-Monetary" decimals="INF">34457000</pattern:FurnitureAndFixturesNet>
+    <pattern:FurnitureAndFixturesNet contextRef="I-2009" unitRef="U-Monetary" decimals="INF">34457000</pattern:FurnitureAndFixturesNet>
+    
+    <pattern:ComputerEquipmentNet contextRef="I-2010" unitRef="U-Monetary" decimals="INF">4169000</pattern:ComputerEquipmentNet>
+    <pattern:ComputerEquipmentNet contextRef="I-2009" unitRef="U-Monetary" decimals="INF">5313000</pattern:ComputerEquipmentNet>
+    
+    <pattern:OtherPropertyPlantAndEquipmentNet contextRef="I-2010" unitRef="U-Monetary" decimals="INF">6702000</pattern:OtherPropertyPlantAndEquipmentNet>
+    <pattern:OtherPropertyPlantAndEquipmentNet contextRef="I-2009" unitRef="U-Monetary" decimals="INF">6149000</pattern:OtherPropertyPlantAndEquipmentNet>
+    
+    <pattern:PropertyPlantAndEquipmentNet contextRef="I-2010" unitRef="U-Monetary" decimals="INF">295183000</pattern:PropertyPlantAndEquipmentNet>
+    <pattern:PropertyPlantAndEquipmentNet contextRef="I-2009" unitRef="U-Monetary" decimals="INF">413441000</pattern:PropertyPlantAndEquipmentNet>
+
+</xbrli:xbrl>
